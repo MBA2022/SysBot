@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  },
+  "name": "new-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^9.5.0"
+  },
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBA2022/S-Bot.git"
+  },
+  "keywords": [
+    "Discord",
+    "Bot"
+  ],
+  "author": "MBA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MBA2022/S-Bot/issues"
+  },
+  "homepage": "https://github.com/MBA2022/S-Bot#readme",
+  "description": ""
+}
