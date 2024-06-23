@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout the files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to v3 for Node.js 20 compatibility
 
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
@@ -34,4 +34,4 @@ jobs:
             # Install necessary dependencies
             npm install
             # Start the Discord bot
-            node .
+            npm start
