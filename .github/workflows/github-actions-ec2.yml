@@ -34,4 +34,4 @@ jobs:
             # Install necessary dependencies
             npm install
             # Start the Discord bot
-            npm start
+            node .
