@@ -9,10 +9,14 @@ dotenv.config();
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
 client.commands = new Collection();
 
 const foldersPath = path.join(__dirname, 'commands');
 const commandFolders = fs.readdirSync(foldersPath);
+
+
+const developers = ['1094937005160407131'];
 
 for (const folder of commandFolders) {
 	const commandsPath = path.join(foldersPath, folder);
@@ -38,7 +42,11 @@ client.on(Events.InteractionCreate, async interaction => {
 		console.error(`No command matching ${interaction.commandName} was found.`);
 		return;
 	}
-
+    if (command.developerOnly && !developers.includes(interaction.user.id)) {
+		await interaction.reply({ content: 'You do not have permission to use this command.', ephemeral: true });
+		return;
+	}
+	
 	try {
 		await command.execute(interaction);
 	} catch (error) {
