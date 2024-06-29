@@ -17,12 +17,12 @@ module.exports = {
 		const embed1 = new EmbedBuilder()
 			.setTitle("Pinging  <a:Loading:1252394245998772245>")
 			.setDescription("Everything is under control")
-			.setColor("#00b0f4");
+			.setColor("#c90076");
 
 		const embed2 = new EmbedBuilder()
-			.setTitle(" I'm Alive! <a:67366gummydragon25:1253429052019314710>")
+			.setTitle(" I'm Alive! <a:45450gummydragon11:1256465522141171712>")
 			.setDescription(`Bot latency: ${ping}ms, API Latency: ${interaction.client.ws.ping}ms`)
-			.setColor("#00b0f4");
+			.setColor("#674ea7");
 
 		await interaction.reply({ embeds: [embed1] });
 

@@ -1,0 +1,32 @@
+const { SlashCommandBuilder, PermissionsBitField, EmbedBuilder } = require('discord.js');
+
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName('unlock')
+        .setDescription('Unlocks the channel, allowing everyone to send messages.'),
+        scope: 'global',
+        developerOnly: false,
+    async execute(interaction) {
+        // Check if the user has the necessary permissions
+        if (!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {
+            return interaction.reply({ content: '🛑 You do not have permission to use this command.', ephemeral: true });
+        }
+
+        const channel = interaction.channel;
+        const everyoneRole = interaction.guild.roles.everyone;
+
+        try {
+            await channel.permissionOverwrites.edit(everyoneRole, {
+                SendMessages: null
+            });
+            const embed = new EmbedBuilder()
+			.setTitle("<:notification:1256478314600857631> Notification")
+			.setDescription(`** <#${channel.id}> has been __unlocked__ 🔓**`)
+			.setColor("#53a52f");
+            await interaction.reply({ embeds: [embed] });
+        } catch (error) {
+            console.error(error);
+            await interaction.reply({ content: '🛑 There was an error unlocking the channel.', ephemeral: true });
+        }
+    },
+};

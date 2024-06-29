@@ -11,7 +11,7 @@
     "eslint": "^9.5.0"
   },
   "scripts": {
-    "test": "start"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
