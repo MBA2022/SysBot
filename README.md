@@ -22,12 +22,12 @@ const developers = ['DeveloperID_1', 'DeveloperID_2'];
 ```
 ## Environment Variables
 
-6. Update Start Script in `package.json`
-replace the start script with nodemon for automatic updates when you make changes to the code:
+6. Create a `.env` file then add the Variables as shown:
 ```js
-"scripts": {
-  "start": "nodemon index.js"
-}
+TOKEN = BOT TOKEN
+CLIENTID = APP ID
+GUILDID = DEVELOPMENT SERVER
+BOT_DM_WEBHOOK_URL = WEBHOOk URL 
 ```
 ## Deployment
 
@@ -36,4 +36,4 @@ To deploy this project you have to add the bot to your discord server then run:
 ```bash
   npm start
 ```
-then if you want to edit the code you don't have to restart the bot manually 
+then if you want to edit the code you don't have to restart the bot manually
