@@ -25,9 +25,9 @@ const developers = ['DeveloperID_1', 'DeveloperID_2'];
 6. Update Start Script in `package.json`
 replace the start script with nodemon for automatic updates when you make changes to the code:
 ```js
-"scripts": {
-  "start": "nodemon index.js"
-}
+TOKEN = BOT TOKEN
+CLIENTID = APP ID
+GUILDID = DEVELOPMENT SERVER
 ```
 ## Deployment
 
