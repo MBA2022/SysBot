@@ -23,7 +23,7 @@ const developers = ['DeveloperID_1', 'DeveloperID_2'];
 ## Environment Variables
 
 6. Update Start Script in `package.json`
-replace the start script with nodemon for automatic updates when you make changes to the code:
+create a `.env` file then add the Variables as shown:
 ```js
 TOKEN = BOT TOKEN
 CLIENTID = APP ID
