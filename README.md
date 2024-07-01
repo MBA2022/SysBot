@@ -27,7 +27,10 @@ const developers = ['DeveloperID_1', 'DeveloperID_2'];
 TOKEN = BOT TOKEN
 CLIENTID = APP ID
 GUILDID = DEVELOPMENT SERVER
+<<<<<<< HEAD
 BOT_DM_WEBHOOK_URL = WEBHOOk URL 
+=======
+>>>>>>> 4baa4d952f0c5a871103b3f5a5ab6dadaa5ab2fc
 ```
 ## Deployment
 
@@ -36,4 +39,8 @@ To deploy this project you have to add the bot to your discord server then run:
 ```bash
   npm start
 ```
+<<<<<<< HEAD
 then if you want to edit the code you don't have to restart the bot manually
+=======
+then if you want to edit the code you don't have to restart the bot manually 
+>>>>>>> 4baa4d952f0c5a871103b3f5a5ab6dadaa5ab2fc
