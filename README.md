@@ -24,10 +24,10 @@ const developers = ['DeveloperID_1', 'DeveloperID_2'];
 
 6. Create a `.env` file then add the Variables as shown:
 ```js
-TOKEN = BOT TOKEN
-CLIENTID = APP ID
-GUILDID = DEVELOPMENT SERVER
-BOT_DM_WEBHOOK_URL = WEBHOOk URL 
+TOKEN = BOT_TOKEN
+CLIENTID = APP _ID
+GUILDID = DEVELOPMENT_SERVER
+BOT_DM_WEBHOOK_URL = WEBHOOk_URL 
 
 ```
 ## Deployment
