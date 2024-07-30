@@ -52,7 +52,6 @@ module.exports = {
     scope: 'global',
     developerOnly: false,
     async execute(interaction) {
-        // Check if the command user has the Manage Messages permission
         if (!interaction.member.permissions.has(PermissionFlagsBits.ManageMessages)) {
             return interaction.reply({ content: '**🛑 You do not have permission to use this command.**', ephemeral: true });
         }
@@ -67,7 +66,11 @@ module.exports = {
         try {
             if (subcommand === 'message') {
                 const content = interaction.options.getString('content');
-                // Send a plain text message
+
+                if (!content || content.trim() === '') {
+                    return interaction.reply({ content: '**🛑 Content cannot be empty!**', ephemeral: true });
+                }
+
                 await target.send(content);
                 await interaction.reply({ content: `**✅ Successfully sent a message to \`${target.tag}\`**`, ephemeral: true });
             } else if (subcommand === 'embed') {
@@ -78,18 +81,23 @@ module.exports = {
                 const footer = interaction.options.getString('footer');
                 const thumbnail = interaction.options.getString('thumbnail');
 
-                // Create the initial embed
+                if (!title || title.trim() === '' || !description || description.trim() === '') {
+                    return interaction.reply({ content: '**🛑 Title and Description cannot be empty!**', ephemeral: true });
+                }
+
                 const embed = new EmbedBuilder()
                     .setTitle(title)
                     .setDescription(description)
                     .setColor(color);
+
                 if (image) {
                     embed.setImage(image);
                 }
+
                 if (footer) {
                     embed.setFooter({ text: footer });
                 }
-                
+
                 if (thumbnail) {
                     embed.setThumbnail(thumbnail);
                 }

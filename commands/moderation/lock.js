@@ -18,7 +18,7 @@ module.exports = {
 
         try {
             await channel.permissionOverwrites.edit(everyoneRole, {
-                SendMessages: false
+                SendMessages: false,
             });
             const embed = new EmbedBuilder()
 			.setTitle("<:notification:1256478314600857631> Notification")

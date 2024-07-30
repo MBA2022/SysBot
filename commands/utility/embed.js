@@ -26,6 +26,11 @@ module.exports = {
                     { name: 'Black', value: '#000000' }
                 )
                 .setRequired(false))
+
+        .addStringOption(option => 
+            option.setName('image')
+             .setDescription('URL of the image')
+             .setRequired(false))
         .addStringOption(option => 
             option.setName('footer')
                 .setDescription('Footer text of the embed')
@@ -44,6 +49,7 @@ module.exports = {
         const title = interaction.options.getString('title');
         const description = interaction.options.getString('description');
         const color = interaction.options.getString('color') || '#00b0f4';
+        const image = interaction.options.getString('image');
         const footer = interaction.options.getString('footer');
         const thumbnail = interaction.options.getString('thumbnail');
 
@@ -53,10 +59,14 @@ module.exports = {
             .setDescription(description)
             .setColor(color);
 
+
+        if (image) {
+            embed.setImage(image);
+        }
         if (footer) {
             embed.setFooter({ text: footer });
         }
-
+        
         if (thumbnail) {
             embed.setThumbnail(thumbnail);
         }
