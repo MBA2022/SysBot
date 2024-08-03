@@ -3,6 +3,8 @@ const { Events, EmbedBuilder } = require('discord.js');
 module.exports = {
     name: Events.GuildCreate,
     async execute(guild) {
+
+        log(`Joined a new guild: ${guild.name} (ID: ${guild.id})`)
         try {
             const owner = await guild.fetchOwner();
 

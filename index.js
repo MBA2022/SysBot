@@ -1,7 +1,14 @@
+/**
+ * @name SysPro
+ * @author MBA <mohdbm.amr@gmail.com>
+ * @license MIT
+ * @copyright (c) 2024 MBA {//}
+ */
+
+const dotenv = require('dotenv');
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits, Partials } = require('discord.js');
-const dotenv = require('dotenv');
 
 dotenv.config();
 const developers = ['1094937005160407131', '731813885895770165'];
@@ -28,6 +35,8 @@ handleCommands(client);
 // Load event handlers
 const handleEvents = require('./handlers/handleEvents');
 handleEvents(client);
+
+
 
 // Log in to Discord with your client's token
 client.login(process.env.TOKEN);

@@ -26,5 +26,6 @@ module.exports = {
         console.error('Error sending message to target channel:', error);
       }
     }
+
   },
 };

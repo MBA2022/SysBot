@@ -1,6 +1,7 @@
 const { Events } = require('discord.js');
 const { developers } = require('../../index.js'); // Import the developers array
 
+
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
@@ -29,5 +30,6 @@ module.exports = {
 				await interaction.reply({ content: '**🛑 There was an error while executing this command!**', ephemeral: true });
 			}
 		}
+	
 	},
 };
