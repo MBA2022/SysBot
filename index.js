@@ -4,7 +4,8 @@ const { Client, Collection, GatewayIntentBits, Partials } = require('discord.js'
 const dotenv = require('dotenv');
 
 dotenv.config();
-
+const developers = ['1094937005160407131', '731813885895770165'];
+module.exports = { developers };
 // Create a new client instance
 const client = new Client({
     intents: [
@@ -15,6 +16,8 @@ const client = new Client({
     ],
     partials: [Partials.Channel], // Required to receive DMs
 });
+
+
 
 client.commands = new Collection();
 require('./deploy-commands');

@@ -5,8 +5,8 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('lock')
         .setDescription('Locks the channel, preventing everyone from sending messages.'),
-        scope: 'global',
-        developerOnly: false,
+    scope: 'global',
+    developerOnly : 'false',
     async execute(interaction) {
         // Check if the user has the necessary permissions
         if (!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {

@@ -10,11 +10,11 @@ module.exports = {
                 .setDescription('The number of messages to delete')
                 .setRequired(true)),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         // Check if the user has the necessary permissions
         if (!interaction.member.permissions.has(PermissionsBitField.Flags.ManageMessages)) {
-            return interaction.reply({ content: '**🛑 You do not have permission to use this command.', ephemeral: true });
+            return interaction.reply({ content: '**🛑 You do not have permission to use this command.**', ephemeral: true });
         }
 
         const count = interaction.options.getInteger('count');

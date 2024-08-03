@@ -7,7 +7,7 @@ module.exports = {
         .addUserOption(option => option.setName('user').setDescription('The user to warn').setRequired(true))
         .addStringOption(option => option.setName('reason').setDescription('The reason for the warning').setRequired(false)),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         if (!interaction.member.permissions.has(PermissionFlagsBits.ManageMessages)) {
             return await interaction.reply({ content: '**🛑 You do not have permission to use this command.**', ephemeral: true });

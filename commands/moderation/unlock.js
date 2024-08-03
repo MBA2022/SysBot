@@ -5,7 +5,7 @@ module.exports = {
         .setName('unlock')
         .setDescription('Unlocks the channel, allowing everyone to send messages.'),
         scope: 'global',
-        developerOnly: false,
+        developerOnly : 'false',
     async execute(interaction) {
         // Check if the user has the necessary permissions
         if (!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {

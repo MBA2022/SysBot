@@ -7,7 +7,7 @@ module.exports = {
         .addUserOption(option => option.setName('target').setDescription('The member to ban').setRequired(true))
         .addStringOption(option => option.setName('reason').setDescription('Reason for the ban')),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         // Check if the command user has the Ban Members permission
         if (!interaction.member.permissions.has(PermissionFlagsBits.BanMembers)) {

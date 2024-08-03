@@ -7,7 +7,7 @@ module.exports = {
         .addUserOption(option => option.setName('target').setDescription('The member to kick').setRequired(true))
         .addStringOption(option => option.setName('reason').setDescription('Reason for the kick')),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         // Check if the command user has the Kick Members permission
         if (!interaction.member.permissions.has(PermissionFlagsBits.KickMembers)) {

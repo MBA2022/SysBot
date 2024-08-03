@@ -7,7 +7,7 @@ module.exports = {
         .addStringOption(option => option.setName('userid').setDescription('The ID of the member to unban').setRequired(true))
         .addStringOption(option => option.setName('reason').setDescription('Reason for the unban')),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         // Check if the command user has the Ban Members permission
         if (!interaction.member.permissions.has(PermissionFlagsBits.BanMembers)) {

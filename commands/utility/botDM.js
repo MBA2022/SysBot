@@ -50,7 +50,7 @@ module.exports = {
                     .setRequired(false)),
         ),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         if (!interaction.member.permissions.has(PermissionFlagsBits.ManageMessages)) {
             return interaction.reply({ content: '**🛑 You do not have permission to use this command.**', ephemeral: true });

@@ -10,7 +10,7 @@ module.exports = {
                 .setDescription('The channel to disable permissions for')
                 .setRequired(true)),
     scope: 'global',
-    developerOnly: false,
+    developerOnly : 'false',
     async execute(interaction) {
         // Check if the user has the necessary permissions
         if (!interaction.member.permissions.has(PermissionsBitField.Flags.ManageChannels)) {

@@ -11,7 +11,7 @@ module.exports = {
 		.setName('alive')
      	.setDescription('Replies with Alive!'),
     scope: 'guild',
-	developerOnly: true,
+	developerOnly: 'true',
 	async execute(interaction) {
 		const ping = calculatePing(interaction);
 		const embed1 = new EmbedBuilder()

@@ -3,9 +3,9 @@
 This guide will help you set up your Discord bot. Follow these steps to get your bot running smoothly.
 
 ## Installation
-  1. [Fork](https://github.com/MBA2022/SysBot/fork) & clone the repository
+  1. [Fork](https://github.com/MBA2022/S-Bot/fork) & clone the repository
 ```ssh
-git clone https://github.com/MBA2022/SysBot
+git clone https://github.com/MBA2022/S-Bot
 ```
   2. Make sure your `node.js` & `npm` are up to date
   3. Run ```npm install``` to install all dependencies
