@@ -15,7 +15,7 @@ module.exports = {
 
         const channel = interaction.channel;
         const everyoneRole = interaction.guild.roles.everyone;
-
+        const botUser = interaction.client.user;
         try {
             await channel.permissionOverwrites.edit(everyoneRole, {
                 SendMessages: false,
@@ -23,7 +23,8 @@ module.exports = {
             const embed = new EmbedBuilder()
 			.setTitle("<:notification:1256478314600857631> Notification")
 			.setDescription(`** <#${channel.id}> has been __locked__ 🔒**`)
-			.setColor("#00b0f4");
+			.setColor("#00b0f4")
+            .setFooter({ text: 'Powered by SysPro', iconURL: botUser.displayAvatarURL({ dynamic: true }) });
             await interaction.reply({ embeds: [embed] });
         } catch (error) {
             console.error(error);

@@ -21,8 +21,6 @@ module.exports = {
 		const creationDate = `<t:${Math.floor(targetUser.createdTimestamp / 1000)}:F>`;
 		const joinDate = `<t:${Math.floor(member.joinedTimestamp / 1000)}:F>`;
 
-		// Get the bot's user object to use its avatar in the footer
-		const botUser = interaction.client.user;
 
 		// Create an embed with user information
 		const embed = new EmbedBuilder()

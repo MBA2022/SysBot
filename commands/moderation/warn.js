@@ -23,7 +23,7 @@ module.exports = {
             if (!member) {
                 return await interaction.reply({ content: '**🛑 Could not find the specified user in this guild.**', ephemeral: true });
             }
-
+            const botUser = interaction.client.user;
             // Ensure the roles exist
             const createdRoles = {};
             const roleNames = [
@@ -120,7 +120,8 @@ module.exports = {
                 const embed3 = new EmbedBuilder()
                     .setTitle("<:notification:1256478314600857631> Notification")
                     .setDescription(`\`${user.tag}\` has been warned. **Warning Level: \`${newWarnLevel}\`**`)
-                    .setColor("#f1bb32");
+                    .setColor("#f1bb32")
+                    .setFooter({ text: 'Powered by SysPro', iconURL: botUser.displayAvatarURL({ dynamic: true }) });
                 await interaction.reply({ embeds: [embed3] });
             }
         } catch (error) {

@@ -29,7 +29,8 @@ module.exports = {
             const embed = new EmbedBuilder()
 			.setTitle("<:notification:1256478314600857631> Notification")
 			.setDescription(`**Successfully __unbanned__ the user with ID** \`${userId}\``)
-			.setColor("#00b0f4");
+			.setColor("#00b0f4")
+            .setFooter({ text: 'Powered by SysPro', iconURL: botMember.displayAvatarURL({ dynamic: true }) });
             await interaction.reply({ embeds: [embed] });
             
         } catch (unbanError) {
