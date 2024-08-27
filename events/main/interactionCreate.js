@@ -1,5 +1,5 @@
 const { Events } = require('discord.js');
-const { developers } = require('../../index.js'); // Import the developers array
+const { developers } = require('../../index'); // Import the developers array
 
 
 module.exports = {
