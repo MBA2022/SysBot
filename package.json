@@ -5,7 +5,7 @@
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
     "mongodb": "^6.8.0",
-    "mongoose": "^8.5.2"
+    "mongoose": "^8.9.5"
   },
   "name": "new-db",
   "version": "1.0.0",
